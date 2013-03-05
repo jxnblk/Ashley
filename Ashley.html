@@ -267,14 +267,9 @@
 						{/block:Text}
 
 						{block:Photo}
-							{LinkOpenTag}
-                            
-                            <img src="{PhotoURL-500}" {block:HighRes}style="display:none"{/block:HighRes} />
-							{block:HighRes}
-                              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
-                              Hi Res image
-                            {/block:HighRes}
-							{LinkCloseTag}
+							<a href="{Permalink}">
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
+							</a>
 
 								
 							{block:Caption}
