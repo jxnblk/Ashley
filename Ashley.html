@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 
-<!-- 
-  Theme: Ashley v0.1
-  Author: Jxnblk  [http://jxnblk.com]
-  For: Tumblr  [http://tumblr.com/]
-  Terms: Protected under Creative Commons.
+<!--
+ 
+      Theme: Ashley v0.1
+      Author: Jxnblk  [http://jxnblk.com]
+      For: Tumblr  [http://tumblr.com/]
+      Terms: Protected under Creative Commons.
+  
 -->
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 		
 		<!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
 		<meta name="text:Colophon" content=""/>
 		<meta name="color:Background" content="#fff"/>
     <meta name="color:Text" content="#444"/>
+    <meta name="color:Link" content="#099"/>
 		
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
-
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 
 		<link rel="shortcut icon" href="{Favicon}">
 		<link rel="apple-touch-icon" href="{PortraitURL-128}">
-		
 		<link rel="alternate" type="application/rss+xml" href="{RSS}">
-        
     <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700' rel='stylesheet' type='text/css'>
     
     <meta name=viewport content='width=device-width, initial-scale=1'>
@@ -49,110 +49,69 @@
         font-size: 100%;
         line-height: 1.5;
         font-weight: 400;
-        color: #444;
-        padding: 2rem 5%;
       }
       
       
-      h1, h2 {
+      h1, h2, .h1, .h2 {
         font-weight: 400;
         line-height: 1.25;
+        margin-top: .5rem;
       }
       
-      h1, .large {
+      h1, .h1 {
         font-size: 2rem;
-        line-height: 1.25;
-        margin-top: .5em;
       }
       
-      h2, .medium {
+      h2, .h2 {
         font-size: 1.5rem;
-        margin-top: .5em;
       }
       
       h1+h2 { margin-top: 0; }
       
-      h3 {
+      p, .p {
         font-size: 1.125rem;
-        font-weight: 700;
-        margin-top: 1em;
-      }
-      
-      p {
-        font-size: 1.125rem;
-        margin-top: 1em;
+        margin-top: 1rem;
       }
       
       small, .small {
         font-size: .875rem;
-        margin-top: 1em;
+        margin-top: 1rem;
       }
       
-      /* Extra Typographical Nonsense */
-      
-      strong, .bold {
+      strong, .strong {
         font-weight: 700;
       }
       
-      article {
-        margin-bottom: 4rem;
-      }
+            @media screen and (min-width: 480px) {
+              h1, .h1 { font-size: 3rem; }
+              h2, .h2 { font-size: 1.75rem; }
+              p, .p { font-size: 1.25rem;}
+              small, .small { font-size: 1rem;}
+            }
+            
+            @media screen and (min-width: 640px) {
+              h1, .h1 { font-size: 4rem; }
+              h2, .h2 { font-size: 2rem; } 
+            }
       
-      #mobile-large-maths, #tablet-maths, #desktop-maths, #ginormous-maths { display: none; }
-      
-      @media screen and (min-width: 480px) {
-        #mobile-maths { display: none; }
-        #mobile-large-maths { display: block; }
-        h1, .large { font-size: 3rem; }
-        h2, .medium { font-size: 1.75rem; }
-        h3, p { font-size: 1.25rem;}
-        small, .small { font-size: 1rem;}
-      }
-      
-      @media screen and (min-width: 640px) {
-        #mobile-large-maths { display: none; }
-        #tablet-maths { display: block; }
-        h1, .large { font-size: 4rem; }
-        h2, .medium { font-size: 2rem; } 
-      }
-      
-      /*
-      @media screen and (min-width: 1024px) {
-        #tablet-maths { display: none; }
-        #desktop-maths { display: block; }
-        h1 { font-size: 6rem; }
-        h2 { font-size: 3rem; }
-        h3, p, strong { font-size: 1.5rem; }
-        small { font-size: 1.125rem; }
-      }
-      */
-      
-      /*
-      @media screen and (min-width: 1280px) {
-        #desktop-maths { display: none; }
-        #ginormous-maths { display:block; }
-        h1 { font-size: 8rem; }
-        h2 { font-size: 4rem; }
-        h3, p, strong { font-size: 2rem; }
-        small { font-size: 1.25rem; }
-        #really { display: block; }
-      }
-      */
       
       header, div.content, footer {
         width: 90%;
         padding: 0 5%;
-        max-width: 60rem;
+        max-width: 48rem;
         margin: 0 auto;
       }
       
+      article {
+        margin-top: 4rem;
+      }
+      
       a {
-        color: #099;
+        color: {color:Link};
         text-decoration: none;
       }
       
       a:hover {
-        color: #0bb;
         text-decoration: underline;
       }
       
@@ -166,8 +125,13 @@
         margin: 0;
       }
       
-      header a {
-        color: #444;
+      header a, .post a h2 {
+        color: {color:Text};
+      }
+      
+      .post a:hover h2 {
+        text-decoration: none;
+        color: {color:Link};
       }
       
       header a:hover {
@@ -216,6 +180,10 @@
         margin-right: 1rem;
       }
       
+      .pagination {
+        margin-top: 4rem;
+      }
+      
       footer {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -234,17 +202,20 @@
 		  
 			{CustomCSS}
 		</style>
-	</head>
+</head>
 
-	<body>
-		<header>
-		  {block:IfLogoImage}<img src="{image:Logo}" />{/block:IfLogoImage}
-			<h1><a href="/">{Title}</a></h1>
+<body>
 
-			{block:Description}
-				<p>{Description}</p>
-			{/block:Description}
-		</header>
+
+  <header>
+    {block:IfLogoImage}<img src="{image:Logo}" />{/block:IfLogoImage}
+  	<h1><a href="/">{Title}</a></h1>
+  
+  	{block:Description}
+  		<p>{Description}</p>
+  	{/block:Description}
+  </header>
+
 
 		<div class="content">
 			<section class="posts">
@@ -287,7 +258,7 @@
 
 						{block:Quote}
 							<blockquote>
-								<p class="medium">&ldquo;{Quote}&rdquo;</p>
+								<p class="h2">&ldquo;{Quote}&rdquo;</p>
 
 								{block:Source}
 									<p class="source">&ndash; {Source}</p>
@@ -392,7 +363,7 @@
 				{/block:Posts}
 
 				{block:PermalinkPagination}
-					<nav>
+					<div class="pagination">
 						{block:PreviousPost}
 							<a href="{PreviousPost}">&larr; Previous Post</a>
 						{/block:PreviousPost}
@@ -400,11 +371,11 @@
 						{block:NextPost}
 							<a href="{NextPost}">Next post &rarr;</a>
 						{/block:NextPost}
-					</nav>
+					</div>
 				{/block:PermalinkPagination}
 				
 				{block:Pagination}
-					<nav>
+					<div class="pagination">
 						{block:PreviousPage}
 							<a href="{PreviousPage}">&larr; Previous</a>
 						{/block:PreviousPage}
@@ -414,21 +385,24 @@
 						{block:NextPage}
 							<a href="{NextPage}">Next &rarr;</a>
 						{/block:NextPage}
-					</nav>
+					</div>
 				{/block:Pagination}
 			</section> <!-- /posts -->
 		</div> <!-- /content -->
+	
 		
-		<footer class="small">
-			<ul>
-				{block:HasPages}
-					{block:Pages}
-						<li><a href="{URL}">{Label}</a></li>
-					{/block:Pages}
-				{/block:HasPages}
-			</ul>
-			
-		  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
-		</footer>
-	</body>
+	<footer class="small">
+		<ul>
+			{block:HasPages}
+				{block:Pages}
+					<li><a href="{URL}">{Label}</a></li>
+				{/block:Pages}
+			{/block:HasPages}
+		</ul>
+		
+	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
+	</footer>
+	
+		
+</body>
 </html>
