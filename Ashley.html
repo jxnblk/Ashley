@@ -125,11 +125,11 @@
         margin: 0;
       }
       
-      header a, .post a h2 {
+      header a, a.post-title {
         color: {color:Text};
       }
       
-      .post a:hover h2 {
+      a.post-title:hover {
         text-decoration: none;
         color: {color:Link};
       }
@@ -142,7 +142,8 @@
         max-width: 100%;
       }
       
-      .post div.photoset_row, .post .photoset_photo img, .post iframe, .video object {
+      div.photoset_row, .photoset_photo img, .post iframe, .video object {
+        width: 100%;
         max-width: 100%;
       }
       
@@ -231,7 +232,7 @@
 					<article class="post {PostType}">
 						{block:Text}
 							{block:Title}
-								<a href="{Permalink}"><h2>{Title}</h2></a>
+								<a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
 							{/block:Title}
 							
 							{Body}
