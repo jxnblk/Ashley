@@ -1,4 +1,4 @@
 Ashley
 ======
 
-A Readable Theme for Tumblr
+A Responsive and Readable Theme for Tumblr, utilizing Google Web Fonts
