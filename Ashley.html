@@ -2,7 +2,7 @@
 
 <!--
  
-      Theme: Ashley v0.1
+      Theme: Ashley v0.2
       Author: Jxnblk  [http://jxnblk.com]
       For: Tumblr  [http://tumblr.com/]
       Terms: Protected under Creative Commons.
@@ -15,7 +15,9 @@
 		
 		<!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
-		<meta name="text:Colophon" content=""/>
+		<meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
+		<meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
+		<meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
 		<meta name="color:Background" content="#fff"/>
     <meta name="color:Text" content="#444"/>
     <meta name="color:Link" content="#099"/>
@@ -26,7 +28,12 @@
 		<link rel="shortcut icon" href="{Favicon}">
 		<link rel="apple-touch-icon" href="{PortraitURL-128}">
 		<link rel="alternate" type="application/rss+xml" href="{RSS}">
-    <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700' rel='stylesheet' type='text/css'>
+    
+    
+    {block:IfGoogleWebFont}
+      <!-- Google Web Fonts -->
+      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+    {/block:IfGoogleWebFont}
     
     <meta name=viewport content='width=device-width, initial-scale=1'>
         
@@ -45,7 +52,7 @@
       body {
         color: {color:Text};
         background: {color:Background};
-        font-family: 'Gentium Book Basic', Georgia, serif;
+        font-family: '{text:GoogleWebFont}', Georgia, serif;
         font-size: 100%;
         line-height: 1.5;
         font-weight: 400;
@@ -328,7 +335,7 @@
 
 
   <header>
-    {block:IfLogoImage}<img src="{image:Logo}" class="logo" />{/block:IfLogoImage}
+    {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
   	<h1><a href="/">{Title}</a></h1>
   	{block:Description}
   		<p>{Description}</p>
