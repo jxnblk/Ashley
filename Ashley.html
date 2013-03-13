@@ -107,6 +107,7 @@
         padding: 0 5%;
         max-width: 48rem;
         margin: 0 auto;
+        overflow: hidden;
       }
       
       article {
@@ -127,6 +128,7 @@
         padding: 2rem 5%;
         max-width: 48rem;
         margin: 0 auto;
+        overflow: hidden;
       }
       
       header:after {
@@ -159,11 +161,14 @@
         text-decoration: none;
       }
       
-      .post img {
+      .post img,
+      .photoset,
+      .photoset img,
+      .photoset_row {
         max-width: 100%;
       }
       
-      div.photoset_row, .photoset_photo img, .post iframe, .video object {
+      .post iframe, .video object {
         width: 100%;
         max-width: 100%;
       }
