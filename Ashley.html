@@ -2,7 +2,7 @@
 
 <!--
  
-      Theme: Ashley v0.2
+      Theme: Ashley v0.3
       Author: Jxnblk  [http://jxnblk.com]
       For: Tumblr  [http://tumblr.com/]
       Terms: Protected under Creative Commons.
@@ -62,56 +62,62 @@
       h1, h2, .h1, .h2 {
         font-weight: 400;
         line-height: 1.25;
-        margin-top: .5rem;
+        margin-top: .5em;
       }
       
       h1, .h1 {
-        font-size: 2rem;
+        font-size: 32px;
       }
       
       h2, .h2 {
-        font-size: 1.5rem;
+        font-size: 24px;
+      }
+      
+      h3, .h3 {
+        font-size: 20px;
       }
       
       h1+h2 { margin-top: 0; }
       
       p, .p, ul, ol {
-        font-size: 1.125rem;
+        font-size: 18px;
       }
       
       small, .small {
-        font-size: .875rem;
+        font-size: 14px;
       }
       
       strong, .strong {
         font-weight: 700;
       }
       
-      p, ul, ol { margin-top: 1rem; }
+      p, ul, ol { margin-top: 1em; }
       
             @media screen and (min-width: 480px) {
-              h1, .h1 { font-size: 3rem; }
-              h2, .h2 { font-size: 2rem; }
-              p, .p, ul, ol { font-size: 1.25rem;}
-              small, .small { font-size: 1rem;}
+              h1, .h1 { font-size: 48px; }
+              h2, .h2 { font-size: 32px; }
+              h3, .h3 { font-size: 24px; }
+              p, .p, ul, ol { font-size: 20px;}
+              small, .small { font-size: 16px;}
             }
             
             @media screen and (min-width: 640px) {
-              h1, .h1 { font-size: 4rem; }
-              h2, .h2 { font-size: 3rem; } 
+              h1, .h1 { font-size: 64px; }
+              h2, .h2 { font-size: 48px; } 
+              h3, .h3 { font-size: 32px; }
             }
       
       
       .wrap {
         width: 90%;
         padding: 0 5%;
-        max-width: 48rem;
+        max-width: 48em;
         margin: 0 auto;
         overflow: hidden;
       }
       
       article {
-        margin-top: 4rem;
+        margin-top: 4em;
       }
       
       a {
@@ -125,8 +131,8 @@
       
       header {
         width: 90%;
-        padding: 2rem 5%;
-        max-width: 48rem;
+        padding: 2em 5% 0;
+        max-width: 48em;
         margin: 0 auto;
         overflow: hidden;
       }
@@ -141,7 +147,7 @@
       
       .logo {
         float: left;
-        margin-right: 1rem;
+        margin-right: 1em;
       }
       
       header h1, header p {
@@ -174,12 +180,12 @@
       }
       
       .post blockquote {
-        padding-left: 1rem;
+        padding-left: 1em;
         border-left: 1px solid #ddd;
       }
       
       .post ul, .post ol {
-        margin-left: 2rem;
+        margin-left: 2em;
       }
       
       .post footer ul, .post footer ol {
@@ -198,7 +204,7 @@
       
       .post footer {
         padding: 0;
-        margin-top: 1rem;
+        margin-top: 1em;
         color: #aaa;
         font-style: italic;
       }
@@ -218,17 +224,17 @@
       
       .post footer ul li {
         display: inline-block;
-        margin-right: 1rem;
+        margin-right: 1em;
       }
       
       .tags {
-        margin-top: 1rem;
+        margin-top: 1em;
       }
       
       .pagination {
-        margin-top: 4rem;
+        margin-top: 4em;
         text-align: center;
-        line-height: 3rem;
+        line-height: 3em;
       }
       
       .pagination:after {
@@ -241,9 +247,9 @@
       
       .pagination a {
         display: block;
-        height: 3rem;
-        padding: 0 1rem;
-        border-radius: 0.25rem;
+        height: 3em;
+        padding: 0 1em;
+        border-radius: 0.25em;
       }
       
       .pagination a:hover {
@@ -261,8 +267,8 @@
 
     
       footer.wrap {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 2em;
+        padding-bottom: 2em;
       }
       
       ul.pages {
@@ -271,27 +277,27 @@
       
       ul.pages li {
         display: inline-block;
-        margin-right: 1rem;        
+        margin-right: 1em;        
       }
       
       ul.pages li a {
         display: block;
-        height: 3rem;
-        line-height: 3rem;
+        height: 3em;
+        line-height: 3em;
       }
       
       
       /* Permalink Notes */
       
       aside.notes {
-        margin-top: 4rem;
+        margin-top: 4em;
       }
       
       ol.notes {
         list-style: none;
-        margin-top: 1rem;
+        margin-top: 1em;
         border: 1px solid #ddd;
-        border-radius: 0.25rem;
+        border-radius: 0.25em;
       }
       
       ol.notes, ol.notes a {
@@ -300,8 +306,8 @@
       
       li.note {
         display: block;
-        line-height: 2rem;
-        padding: 0.5rem 1rem;
+        line-height: 2em;
+        padding: 0.5em 1em;
         border-bottom: 1px solid #ddd;
       }
       li.note:last-child {
@@ -311,10 +317,10 @@
       ol.notes li.note img.avatar {
         display: block;
         float: left;
-        width: 2rem;
-        height: 2rem;
-        margin-right: 1rem;
-        border-radius: 0.25rem;
+        width: 2em;
+        height: 2em;
+        margin-right: 1em;
+        border-radius: 0.25em;
       }
       
       .notes .action a {
@@ -323,12 +329,12 @@
       
       .action {
         display: block;
-        margin-left: 3rem;
+        margin-left: 3em;
       }
       
       .notes blockquote {
         line-height: 1.5;
-        margin-left: 3rem;
+        margin-left: 3em;
       }
 		  
 			{CustomCSS}
@@ -392,7 +398,7 @@
 
 						{block:Quote}
 							<blockquote>
-								<p class="h2">&ldquo;{Quote}&rdquo;</p>
+								<p class="h3">&ldquo;{Quote}&rdquo;</p>
 
 								{block:Source}
 									<p class="source">&ndash; {Source}</p>
