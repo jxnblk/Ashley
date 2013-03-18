@@ -2,7 +2,7 @@
 
 <!--
  
-      Theme: Ashley v0.3
+      Theme: Ashley v0.3.1
       Author: Jxnblk  [http://jxnblk.com]
       For: Tumblr  [http://tumblr.com/]
       Terms: Protected under Creative Commons.
@@ -378,11 +378,10 @@
 						{/block:Text}
 
 						{block:Photo}
-							<a href="{Permalink}">
+							{LinkOpenTag}
                 <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
-							</a>
+							{LinkCloseTag}
 
-								
 							{block:Caption}
 								{Caption}
 							{/block:Caption}
