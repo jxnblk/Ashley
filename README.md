@@ -5,16 +5,16 @@ A Responsive and Readable Theme for Tumblr, utilizing Google Web Fonts
 
 ![Ashley Screenshot](Ashley.png)
 
-## Readable
+### Readable
 Don't hunch over. Sit back and enjoy.
 
-## Responsive
+### Responsive
 Content is device agnostic. Your blog should be too.
 
-## Minimal
+### Minimal
 Just what you need. No more. No less.
 
-## Customizable
+### Customizable
 Use any Google Web Font. Defaults to Gentium Book.
 
 [jxnblk.com/ashley](http://jxnblk.com/ashley)
