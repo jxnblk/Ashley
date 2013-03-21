@@ -358,6 +358,17 @@
 
 <body>
 
+{block:IfFacebookID}
+<script type="text/javascript">
+// <![CDATA[
+    var meta = document.createElement('meta');
+    meta.setAttribute("property", "og:url");
+    meta.setAttribute("content", location.href);
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(meta);    
+// ]]>
+</script>
+{/block:IfFacebookID}
+
 
   <header>
     {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
