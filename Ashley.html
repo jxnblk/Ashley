@@ -19,9 +19,23 @@
 		<meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
 		<meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
 		<meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Link" content="#099"/>
-		
+                <meta name="color:Text" content="#444"/>
+                <meta name="color:Link" content="#099"/>
+		<meta name="text:Facebook ID" content="YOUR_FACEBOOK_ID">
+                {block:IfFacebookID}
+                <meta property="fb:admin" content="{text:Facebook ID}">
+                <meta property="og:site_name" content="{Title}">
+                <meta property="og:image" content="{PortraitURL-48}">
+                <meta property="og:title" content="{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}{block:SearchPage} &mdash; Search results for {SearchQuery}{/block:SearchPage}">
+{block:IndexPage} 
+                <meta property="og:type" content="blog">
+                <meta property="og:description" content="{MetaDescription}">
+{/block:IndexPage}      
+{block:PermalinkPage}
+                <meta property="og:type" content="article">
+                <meta property="og:description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}">
+{/block:PermalinkPage}
+{/block:IfFacebookID}
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 
