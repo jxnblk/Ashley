@@ -21,6 +21,7 @@
 		<meta name="color:Background" content="#fff"/>
                 <meta name="color:Text" content="#444"/>
                 <meta name="color:Link" content="#099"/>
+                <meta name="if:Show notes on permalink page" content="1" />
 		<meta name="text:Facebook ID" content="YOUR_FACEBOOK_ID">
                 {block:IfFacebookID}
                 <meta property="fb:admin" content="{text:Facebook ID}">
@@ -517,14 +518,14 @@
 						{/block:Date}
 					</article> <!-- /post -->			
 
-					
+				{block:IfShowNotesOnPermalinkPages}	
   				{block:PostNotes}
   				  <aside class="notes">
     				  {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
     					{PostNotes-64}
   				  </aside>
   				{/block:PostNotes}
-
+                                {/block:IfShowNotesOnPermalinkPages}
 
 				{/block:Posts}
 				
