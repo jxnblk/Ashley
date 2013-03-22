@@ -22,6 +22,7 @@
                 <meta name="color:Text" content="#444"/>
                 <meta name="color:Link" content="#099"/>
                 <meta name="if:Show notes on permalink page" content="1" />
+                <meta name="if:Show Tags" content="1" />
 		<meta name="text:Facebook ID" content="YOUR_FACEBOOK_ID">
                 {block:IfFacebookID}
                 <meta property="fb:admin" content="{text:Facebook ID}">
@@ -500,7 +501,7 @@
 								</ul>
 								
 								{block:PermalinkPage}
-                    
+                    {block:ShowTags}
                     {block:HasTags}
   											<ul class="tags">
   												{block:Tags}
@@ -510,7 +511,7 @@
   												{/block:Tags}
   											</ul>
   									{/block:HasTags}
-  										
+  									{/block:ShowTags}	
 								{/block:PermalinkPage}
 								
 								
