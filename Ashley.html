@@ -15,13 +15,30 @@
 		
 		<!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
+		<meta name="text:Google Analytics Web Property ID" content="" />
 		<meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
 		<meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
 		<meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
 		<meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Link" content="#099"/>
-		
+                <meta name="color:Text" content="#444"/>
+                <meta name="color:Link" content="#099"/>
+                <meta name="if:Show notes on permalink page" content="1" />
+                <meta name="if:Show Tags" content="1" />
+		<meta name="text:Facebook ID" content="YOUR_FACEBOOK_ID">
+                {block:IfFacebookID}
+                <meta property="fb:admin" content="{text:Facebook ID}">
+                <meta property="og:site_name" content="{Title}">
+                <meta property="og:image" content="{PortraitURL-48}">
+                <meta property="og:title" content="{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}{block:SearchPage} &mdash; Search results for {SearchQuery}{/block:SearchPage}">
+{block:IndexPage} 
+                <meta property="og:type" content="blog">
+                <meta property="og:description" content="{MetaDescription}">
+{/block:IndexPage}      
+{block:PermalinkPage}
+                <meta property="og:type" content="article">
+                <meta property="og:description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}">
+{/block:PermalinkPage}
+{/block:IfFacebookID}
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 
@@ -344,6 +361,17 @@
 
 <body>
 
+{block:IfFacebookID}
+<script type="text/javascript">
+// <![CDATA[
+    var meta = document.createElement('meta');
+    meta.setAttribute("property", "og:url");
+    meta.setAttribute("content", location.href);
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(meta);    
+// ]]>
+</script>
+{/block:IfFacebookID}
+
 
   <header>
     {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
@@ -474,7 +502,7 @@
 								</ul>
 								
 								{block:PermalinkPage}
-                    
+                    {block:ShowTags}
                     {block:HasTags}
   											<ul class="tags">
   												{block:Tags}
@@ -484,7 +512,7 @@
   												{/block:Tags}
   											</ul>
   									{/block:HasTags}
-  										
+  									{/block:ShowTags}	
 								{/block:PermalinkPage}
 								
 								
@@ -492,14 +520,14 @@
 						{/block:Date}
 					</article> <!-- /post -->			
 
-					
+				{block:IfShowNotesOnPermalinkPages}	
   				{block:PostNotes}
   				  <aside class="notes">
     				  {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
     					{PostNotes-64}
   				  </aside>
   				{/block:PostNotes}
-
+                                {/block:IfShowNotesOnPermalinkPages}
 
 				{/block:Posts}
 				
@@ -529,7 +557,20 @@
 		
 	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
 	</footer>
-	
+	    <script type="text/javascript">
+var analytics_code = '{text:Google Analytics Web Property ID}'.trim();
+if (analytics_code.length) {
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', analytics_code]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+}
+</script>  
 		
 </body>
 </html>
