@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!--
  
       Theme: Ashley v0.4
@@ -8,11 +7,9 @@
       Terms: Protected under Creative Commons.
   
 -->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-		
 		<!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
 		<meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
@@ -21,27 +18,18 @@
 		<meta name="color:Background" content="#fff"/>
     <meta name="color:Text" content="#444"/>
     <meta name="color:Link" content="#099"/>
-		
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
-
 		<link rel="shortcut icon" href="{Favicon}">
 		<link rel="apple-touch-icon" href="{PortraitURL-128}">
 		<link rel="alternate" type="application/rss+xml" href="{RSS}">
-    
-    
     {block:IfGoogleWebFont}
-      <!-- Google Web Fonts -->
       <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
     {/block:IfGoogleWebFont}
-    
     <meta name=viewport content='width=device-width, initial-scale=1'>
-        
-        
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
 		<style>
       
       * {
@@ -341,9 +329,7 @@
 			
 		</style>
 </head>
-
 <body>
-
 
   <header>
     {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
@@ -352,7 +338,6 @@
   		<p>{Description}</p>
   	{/block:Description}
   </header>
-
 
 		<div class="content wrap">
 			<section class="posts">
@@ -458,16 +443,13 @@
 							<footer>
 								<ul class="small">
 									<li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
-										
 									{block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
 									{block:ContentSource}
 										<li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
 									{/block:ContentSource}
-									
 								</ul>
 								
 								{block:PermalinkPage}
-                    
                     {block:HasTags}
   											<ul class="tags">
   												{block:Tags}
@@ -476,23 +458,19 @@
   													</li>
   												{/block:Tags}
   											</ul>
-  									{/block:HasTags}
-  										
+  									{/block:HasTags}			
 								{/block:PermalinkPage}
-								
-								
+															
 							</footer>
 						{/block:Date}
 					</article> <!-- /post -->			
-
-					
+				
   				{block:PostNotes}
   				  <aside class="notes">
     				  {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
     					{PostNotes-64}
   				  </aside>
   				{/block:PostNotes}
-
 
 				{/block:Posts}
 				
@@ -503,15 +481,11 @@
 						<span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
 					</div>
 				{/block:Pagination}
-				
-				
-				
+							
 			</section> <!-- /posts -->
 		</div> <!-- /content -->
 	
-		
 	<footer class="small wrap">
-	
   	{block:HasPages}
   		<ul class="pages">
 				{block:Pages}
@@ -519,15 +493,9 @@
 				{/block:Pages}
   		</ul>
 		{/block:HasPages}
-		
-		{block:AskEnabled}
-      <a href="/ask">{AskLabel}</a>
-    {/block:AskEnabled}
-
-		
+		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
 	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
 	</footer>
 	
-		
 </body>
 </html>
