@@ -162,7 +162,7 @@
         max-width: 100%;
       }
       
-      .post iframe, .video object {
+      .post iframe:not(.photoset), .video object {
         width: 100%;
         max-width: 100%;
       }
@@ -323,6 +323,16 @@
       .notes blockquote {
         line-height: 1.5;
         margin-left: 3em;
+      }
+      
+      img.singlePhoto {
+        display:block;
+        margin: auto
+      }
+
+      iframe.photoset {
+        margin: auto;
+        display: table;
       }
 		  
 			{CustomCSS}
