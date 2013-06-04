@@ -1,0 +1,86 @@
+/*
+
+        Mathematical Theme
+
+
+*/
+
+$dkgry: #444;
+$mdgry: #999;
+$ltgry: #eee;
+$link:  #0cf;
+
+// Add prime color
+
+body {
+  color: $dkgry;
+  background-color: #fff;
+  font-family: 'Gentium Book Basic', Georgia, serif;
+}
+
+
+a {
+  color: $link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darken($link, 10%);
+}
+
+
+.dkgry { color: $dkgry; }
+.mdgry { color: $mdgry; }
+.ltgry { color: $ltgry; }
+.wht   { color: #fff; }
+.link  { color: $link; }
+
+.bg-dkgry { background-color: $dkgry; }
+.bg-mdgry { background-color: $mdgry; }
+.bg-ltgry { background-color: $ltgry; }
+.bg-wht   { background-color: #fff; }
+.bg-link  { background-color: $link; }
+
+
+.boto { border-top:    1px solid; }
+.bori { border-right:  1px solid; }
+.bobo { border-bottom: 1px solid; }
+.bole { border-left:   1px solid; }
+
+.bo-dkgry { border-color: $dkgry; }
+.bo-mdgry { border-color: $mdgry; }
+.bo-ltgry { border-color: $ltgry; }
+.bo-wht {   border-color: #fff; }
+
+
+.rc, .btn {   border-radius: .25rem; }
+.circ     {   border-radius: 50%; }
+
+
+.btn-link {
+  color: #fff;
+  background-color: $link;
+  &:hover {
+    color: #fff;
+    background-color: lighten($link, 10%);
+  }
+  &:active {
+    box-shadow: inset 0 2px 4px rgba($dkgry, .5);
+  }
+}
+
+.btn-gry {
+  color: #fff;
+  background-color: $mdgry;
+  &:hover {
+    color: #fff;
+    background-color: lighten($mdgry, 10%);
+  }
+  &:active {
+    box-shadow: inset 0 2px 4px rgba($dkgry, .5);
+  }
+}
+
+.bg-darken {
+  background-color: rgba(0,0,0,0.2);
+}

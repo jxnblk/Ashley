@@ -1,0 +1,815 @@
+/*
+
+        Mathematical
+        A simple, responsive framework
+        
+        Made with love by Jxnblk
+
+
+*/
+/*
+
+        Mathematical Base
+
+
+*/
+body, h1, h2, h3, h4, h5, h6, ul, ol, p {
+  margin: 0;
+  padding: 0; }
+
+/*
+
+        Mathematical Type
+
+
+*/
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 400; }
+
+h1, .h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 400; }
+
+h2, .h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 400; }
+
+p, ul, ol, .p, h3, h4, h5, h6 {
+  font-size: 1.125rem;
+  font-weight: 400; }
+
+small, .small {
+  font-size: .875rem;
+  -webkit-text-size-adjust: 100%; }
+
+strong, .bold {
+  font-weight: 700; }
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: .2em; }
+
+.txtcen {
+  text-align: center; }
+
+.txtri {
+  text-align: right; }
+
+    /*
+@media screen and (min-width: 480px) {
+      .h1 { font-size: 3rem; }
+      .h2 { font-size: 1.75rem; }
+      .p { font-size: 1.25rem; }
+      .small { font-size: 1rem; }
+    }
+*/
+@media screen and (min-width: 640px) {
+  .h1-tab {
+    font-size: 4rem; }
+
+  .h2-tab {
+    font-size: 2rem; } }
+@media screen and (min-width: 1024px) {
+  .h1-desk {
+    font-size: 6rem; }
+
+  .h2-desk {
+    font-size: 3rem; } }
+/*
+
+        Mathematical Structure
+
+
+*/
+.mar0 {
+  margin: 0; }
+
+.mar {
+  margin: 1rem; }
+
+.marto {
+  margin-top: 1rem; }
+
+.marri {
+  margin-right: 1rem; }
+
+.marbo {
+  margin-bottom: 1rem; }
+
+.marle {
+  margin-left: 1rem; }
+
+.marto2 {
+  margin-top: 2rem; }
+
+.marri2 {
+  margin-right: 2rem; }
+
+.marbo2 {
+  margin-bottom: 2rem; }
+
+.marle2 {
+  margin-left: 2rem; }
+
+.pad0 {
+  padding: 0; }
+
+.pad {
+  padding: 1rem; }
+
+.padto {
+  padding-top: 1rem; }
+
+.padri {
+  padding-right: 1rem; }
+
+.padbo {
+  padding-bottom: 1rem; }
+
+.padle {
+  padding-left: 1rem; }
+
+.pad2 {
+  padding: 2rem; }
+
+.padto2 {
+  padding-top: 2rem; }
+
+.padri2 {
+  padding-right: 2rem; }
+
+.padbo2 {
+  padding-bottom: 2rem; }
+
+.padle2 {
+  padding-left: 2rem; }
+
+@media screen and (min-width: 640px) {
+  /*
+        .mar   {  margin:         2rem; }
+        .marto {  margin-top:     2rem; }
+        .marri {  margin-right:   2rem; }
+        .marbo {  margin-bottom:  2rem; }
+        .marle {  margin-left:    2rem; }
+        
+        .marto2 { margin-top:     4rem; }
+        .marri2 { margin-right:   4rem; }
+        .marbo2 { margin-bottom:  4rem; }
+        .marle2 { margin-left:    4rem; }
+  */
+  .pad {
+    padding: 2rem; }
+
+  .padto {
+    padding-top: 2rem; }
+
+  .padri {
+    padding-right: 2rem; }
+
+  .padbo {
+    padding-bottom: 2rem; }
+
+  .padle {
+    padding-left: 2rem; }
+
+  .pad2 {
+    padding: 4rem; }
+
+  .padto2 {
+    padding-top: 4rem; }
+
+  .padri2 {
+    padding-right: 4rem; }
+
+  .padbo2 {
+    padding-bottom: 4rem; }
+
+  .padle2 {
+    padding-left: 4rem; } }
+.tappad {
+  padding: 0 1rem;
+  line-height: 3rem; }
+
+@media screen and (max-width: 640px) {
+  .tappad {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    display: block; } }
+.bobox {
+  box-sizing: border-box; }
+
+.disb {
+  display: block; }
+
+.disib {
+  display: inline-block; }
+
+.vert-mid {
+  vertical-align: middle; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.wrap {
+  margin: 0 auto; }
+
+.posrel {
+  position: relative; }
+
+.posabs {
+  position: absolute; }
+
+.fill {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.to0 {
+  top: 0; }
+
+.ri0 {
+  right: 0; }
+
+.bo0 {
+  bottom: 0; }
+
+.le0 {
+  left: 0; }
+
+.to1 {
+  top: 1rem; }
+
+.ri1 {
+  right: 1rem; }
+
+.bo1 {
+  bottom: 1rem; }
+
+.le1 {
+  left: 1rem; }
+
+.to2 {
+  top: 2rem; }
+
+.ri2 {
+  right: 2rem; }
+
+.bo2 {
+  bottom: 2rem; }
+
+.le2 {
+  left: 2rem; }
+
+.z1 {
+  z-index: 100; }
+
+.z2 {
+  z-index: 200; }
+
+.z3 {
+  z-index: 300; }
+
+.z4 {
+  z-index: 400; }
+
+.z5 {
+  z-index: 500; }
+
+.overhide {
+  overflow: hidden; }
+
+.scroll-y {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+.sq16 {
+  width: 16px;
+  height: 16px; }
+
+.sq24 {
+  width: 24px;
+  height: 24px; }
+
+.sq32 {
+  width: 32px;
+  height: 32px; }
+
+.sq48 {
+  width: 48px;
+  height: 48px; }
+
+.sq64 {
+  width: 64px;
+  height: 64px; }
+
+.sq96 {
+  width: 96px;
+  height: 96px; }
+
+.sq128 {
+  width: 128px;
+  height: 128px; }
+
+.sq160 {
+  width: 160px;
+  height: 160px; }
+
+.sq256 {
+  width: 256px;
+  height: 256px; }
+
+.sq320 {
+  width: 320px;
+  height: 320px; }
+
+.sq512 {
+  width: 512px;
+  height: 512px; }
+
+.sq768 {
+  width: 768px;
+  height: 768px; }
+
+.sq64-txt {
+  line-height: 64px; }
+
+.sq96-txt {
+  line-height: 96px; }
+
+.sq128-txt {
+  line-height: 128px; }
+
+.minhi16 {
+  min-height: 16px; }
+
+.minhi24 {
+  min-height: 24px; }
+
+.minhi32 {
+  min-height: 32px; }
+
+.minhi48 {
+  min-height: 48px; }
+
+.minhi64 {
+  min-height: 64px; }
+
+.minhi96 {
+  min-height: 96px; }
+
+.minhi128 {
+  min-height: 128px; }
+
+.wi100 {
+  width: 100%; }
+
+.wi90 {
+  width: 90%; }
+
+.wi75 {
+  width: 80%; }
+
+.wi50 {
+  width: 75%; }
+
+.wi25 {
+  width: 25%; }
+
+.maxwi640 {
+  max-width: 640px; }
+
+.maxwi768 {
+  max-width: 768px; }
+
+.maxwi1024 {
+  max-width: 1024px; }
+
+.grid1 {
+  float: left;
+  width: 100%;
+  box-sizing: border-box; }
+
+@media screen and (min-width: 768px) {
+  .grid1-25 {
+    width: 25%; }
+
+  .grid1-40 {
+    width: 40%; }
+
+  .grid1-50 {
+    width: 50%; }
+
+  .grid1-60 {
+    width: 60%; }
+
+  .grid1-75 {
+    width: 75%; }
+
+  .grid1-gutter {
+    padding-right: 4rem; } }
+@media screen and (max-width: 512px) {
+  .mob-hide {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .tab-hide {
+    display: none; } }
+/*
+
+        Mathematical Modules
+
+
+*/
+.media {
+  overflow: hidden; }
+  .media .img {
+    float: left; }
+  .media .bd {
+    overflow: hidden; }
+
+@media screen and (max-width: 512px) {
+  .media-fold512 .img {
+    float: none; } }
+@media screen and (max-width: 767px) {
+  .media-fold768 .img {
+    float: none; } }
+.btn {
+  display: inline-block;
+  overflow: hidden; }
+
+.btn-med {
+  line-height: 48px;
+  padding: 0 16px; }
+
+.btn-big {
+  line-height: 64px;
+  padding: 0 16px; }
+
+.cap-left {
+  padding: 0 16px;
+  margin-left: -16px; }
+
+.cap-right {
+  padding: 0 16px;
+  margin-right: -16px; }
+
+.modal {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1024; }
+  .modal:target {
+    display: block; }
+
+.drawer {
+  display: none; }
+  .drawer:target {
+    display: block; }
+
+.hover-show {
+  display: none; }
+
+.hover-group:hover .hover-show {
+  display: block; }
+
+/* Device Previews */
+.product-hero {
+  position: relative;
+  width: 100%;
+  max-width: 90rem;
+  margin: 2rem auto 1rem auto;
+  height: 52em;
+  font-size: 6px;
+  overflow: hidden;
+  -webkit-transition: all .2s linear; }
+
+.device, .device img, .device-screen {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.device {
+  margin: 0 auto;
+  position: absolute; }
+
+.device article {
+  margin-top: 3em; }
+
+.device-screen {
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  line-height: 1.5; }
+
+.device-screen p {
+  margin-top: 1em; }
+
+.device-screen h1 + p {
+  margin-top: 0; }
+
+/* MBP */
+.device.mbp {
+  font-size: .5em;
+  left: -5%; }
+
+.mbp.device img {
+  width: 180em;
+  height: 102em; }
+
+.mbp .device-screen {
+  width: 135em;
+  height: 80em;
+  left: 22.5em;
+  top: 10em;
+  padding: 4em; }
+
+.mbp .device-screen .wrap,
+.mbp .device-screen header {
+  max-width: 72em;
+  margin: 0 auto; }
+
+.mbp h1 {
+  font-size: 6em; }
+
+.mbp h2 {
+  font-size: 4.5em; }
+
+.mbp p {
+  font-size: 1.875em;
+  margin-top: 1.5em; }
+
+/* iPad */
+.ipad.device {
+  font-size: .5em;
+  left: 65%;
+  top: 20em; }
+
+.ipad.device img {
+  width: 56em;
+  height: 84em; }
+
+.ipad .device-screen {
+  width: 48em;
+  height: 58em;
+  left: 4em;
+  top: 16em;
+  padding: 4em 5%; }
+
+.ipad h1 {
+  font-size: 4em; }
+
+.ipad h2 {
+  font-size: 3em; }
+
+.ipad p {
+  font-size: 1.25em;
+  margin-top: 1em; }
+
+/* iPhone */
+.iphone.device {
+  font-size: .5em;
+  top: 51.5em;
+  left: 60%; }
+
+.iphone.device img {
+  width: 28em;
+  height: 52em; }
+
+.iphone .device-screen {
+  width: 20em;
+  height: 33em;
+  left: 4em;
+  top: 8em;
+  padding: 2em 5%; }
+
+.iphone h1 {
+  font-size: 2em; }
+
+.iphone h2 {
+  font-size: 1.5em; }
+
+.iphone p {
+  font-size: 1.125em;
+  margin-top: 1em; }
+
+@media screen and (min-width: 480px) {
+  .device.mbp {
+    left: 0; }
+
+  .iphone.device {
+    left: 60%; } }
+@media screen and (min-width: 640px) {
+  .product-hero {
+    font-size: 8px; }
+
+  .device.mbp {
+    left: 5%; } }
+@media screen and (min-width: 1024px) {
+  .product-hero {
+    font-size: 10px; }
+
+  .device.mbp {
+    left: 10%; }
+
+  .ipad.device {
+    left: 65%; } }
+@media screen and (min-width: 1280px) {
+  .product-hero {
+    font-size: 12px; }
+
+  .device.mbp {
+    left: 10%; }
+
+  .ipad.device {
+    left: 65%; }
+
+  .iphone.device {
+    left: 60%; } }
+/*
+
+        Mathematical Theme
+
+
+*/
+body {
+  color: #444444;
+  background-color: #fff;
+  font-family: 'Gentium Book Basic', Georgia, serif; }
+
+a {
+  color: #00ccff;
+  text-decoration: none; }
+
+a:hover {
+  color: #00a3cc; }
+
+.dkgry {
+  color: #444444; }
+
+.mdgry {
+  color: #999999; }
+
+.ltgry {
+  color: #eeeeee; }
+
+.wht {
+  color: #fff; }
+
+.link {
+  color: #00ccff; }
+
+.bg-dkgry {
+  background-color: #444444; }
+
+.bg-mdgry {
+  background-color: #999999; }
+
+.bg-ltgry {
+  background-color: #eeeeee; }
+
+.bg-wht {
+  background-color: #fff; }
+
+.bg-link {
+  background-color: #00ccff; }
+
+.boto {
+  border-top: 1px solid; }
+
+.bori {
+  border-right: 1px solid; }
+
+.bobo {
+  border-bottom: 1px solid; }
+
+.bole {
+  border-left: 1px solid; }
+
+.bo-dkgry {
+  border-color: #444444; }
+
+.bo-mdgry {
+  border-color: #999999; }
+
+.bo-ltgry {
+  border-color: #eeeeee; }
+
+.bo-wht {
+  border-color: #fff; }
+
+.rc, .btn {
+  border-radius: .25rem; }
+
+.circ {
+  border-radius: 50%; }
+
+.btn-link {
+  color: #fff;
+  background-color: #00ccff; }
+  .btn-link:hover {
+    color: #fff;
+    background-color: #33d6ff; }
+  .btn-link:active {
+    box-shadow: inset 0 2px 4px rgba(68, 68, 68, 0.5); }
+
+.btn-gry {
+  color: #fff;
+  background-color: #999999; }
+  .btn-gry:hover {
+    color: #fff;
+    background-color: #b3b3b3; }
+  .btn-gry:active {
+    box-shadow: inset 0 2px 4px rgba(68, 68, 68, 0.5); }
+
+.bg-darken {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+/*
+
+        Mathematical Icons
+
+
+*/
+/*
+
+        Mathematical Animations
+
+
+*/
+.anim-fast {
+  -webkit-animation-duration: .1s;
+  -webkit-animation-timing-function: linear; }
+
+.anim-med {
+  -webkit-animation-duration: .2s;
+  -webkit-animation-timing-function: linear; }
+
+.anim-slow {
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: linear; }
+
+.anim-slow2 {
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear; }
+
+@-webkit-keyframes pop-in {
+  0% {
+    -webkit-transform: scale(0.8); }
+
+  95% {
+    -webkit-transform: scale(1.1); }
+
+  100% {
+    -webkit-transform: scale(1); } }
+
+.pop-in {
+  -webkit-animation-name: pop-in; }
+
+@-webkit-keyframes grow-in {
+  0% {
+    -webkit-transform: scale(0.8); }
+
+  100% {
+    -webkit-transform: scale(1); } }
+
+.grow-in {
+  -webkit-animation-name: grow-in; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: .5; }
+
+  100% {
+    opacity: 1; } }
+
+.fade-in {
+  -webkit-animation-name: fade-in; }
+
+@-webkit-keyframes accordion-open {
+  0% {
+    height: 0; }
+
+  100% {
+    height: auto;
+    min-height: 48px;
+    max-height: 4096px; } }
+
+.accordion-open {
+  -webkit-animation-name: accordion-open; }
+
+.grow-fade-in {
+  -webkit-animation-name: grow-in, fade-in; }

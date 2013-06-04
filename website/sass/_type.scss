@@ -1,0 +1,71 @@
+/*
+
+        Mathematical Type
+
+
+*/
+
+
+
+////////////////////////////////////////////////////////////////
+// From old CSS
+
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+h2, .h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+p, ul, ol, .p, h3, h4, h5, h6 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+small, .small {
+  font-size: .875rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+strong, .bold {
+  font-weight: 700;
+}
+
+.caps { 
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.txtcen { text-align: center; }
+.txtri  { text-align: right; }
+
+
+    /*
+@media screen and (min-width: 480px) {
+      .h1 { font-size: 3rem; }
+      .h2 { font-size: 1.75rem; }
+      .p { font-size: 1.25rem; }
+      .small { font-size: 1rem; }
+    }
+*/
+    
+    @media screen and (min-width: 640px) {
+      .h1-tab { font-size: 4rem; }
+      .h2-tab { font-size: 2rem; } 
+    }
+    
+    @media screen and (min-width: 1024px) {
+      .h1-desk { font-size: 6rem; }
+      .h2-desk { font-size: 3rem; }
+    }

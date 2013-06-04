@@ -1,0 +1,47 @@
+/*
+
+        Mathematical Animations
+
+
+*/
+
+
+.anim-fast { -webkit-animation-duration: .1s; -webkit-animation-timing-function: linear; }
+.anim-med  { -webkit-animation-duration: .2s; -webkit-animation-timing-function: linear; }
+.anim-slow { -webkit-animation-duration: .5s; -webkit-animation-timing-function: linear; }
+.anim-slow2 { -webkit-animation-duration: 2s; -webkit-animation-timing-function: linear; }
+
+@-webkit-keyframes pop-in {
+  0%   { -webkit-transform: scale(.8); }
+  95%  { -webkit-transform: scale(1.1); } 
+  100% { -webkit-transform: scale(1); }
+}
+.pop-in { -webkit-animation-name: pop-in; }
+
+
+@-webkit-keyframes grow-in {
+  0%   { -webkit-transform: scale(.8); } 
+  100% { -webkit-transform: scale(1); }
+}
+.grow-in { -webkit-animation-name: grow-in; }
+
+
+@-webkit-keyframes fade-in {
+  0%   { opacity: .5; }
+  100% { opacity: 1; }
+}
+.fade-in { -webkit-animation-name: fade-in; }
+
+
+@-webkit-keyframes accordion-open {
+  0%   { height: 0; }
+  100% {
+    height: auto; 
+    min-height: 48px;
+    max-height: 4096px; }
+}
+.accordion-open { -webkit-animation-name: accordion-open; }
+
+.grow-fade-in {
+  -webkit-animation-name: grow-in, fade-in;
+}
