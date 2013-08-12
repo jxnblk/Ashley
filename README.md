@@ -33,3 +33,34 @@ Use any Google Web Font. Defaults to Gentium Book.
 4. In the *GoogleWebFontURL* field, type or paste in the name as it appears in Google's code – e.g. *Gentium+Book+Basic*
 
 5. Click *Save* 
+
+## How to use Typekit
+
+1. Create a kit on Typekit
+
+2. Go to your blog and click *Customize*
+
+3. Click the *Edit HTML* button
+
+4. Replace the Google Web Font Block with the Typekit embed code
+    
+    <!-- Replace this block: -->
+    {block:IfGoogleWebFont}
+      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+    {/block:IfGoogleWebFont}
+    
+    <!-- with your Typekit embed code: -->
+    <script type="text/javascript" src="//use.typekit.net/XXXXXXX.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+5. Replace the font-family declaration with the one from Typekit
+
+    <!-- Change this line: -->
+    font-family: '{text:GoogleWebFont}', Georgia, serif;
+    
+    <!-- To something like this: -->
+    font-family: "skolar",serif;
+
+6. Click *Update Preview*, then *Save*
+
+
