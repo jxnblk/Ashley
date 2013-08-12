@@ -42,9 +42,9 @@ Use any Google Web Font. Defaults to Gentium Book.
 
 3. Click the *Edit HTML* button
 
-4. Replace the Google Web Font Block with the Typekit embed code
+4. Replace the Google Web Font block with the Typekit embed code
 
-    ```
+    ```html
     <!-- Replace this block: -->
     {block:IfGoogleWebFont}
       <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
@@ -57,7 +57,7 @@ Use any Google Web Font. Defaults to Gentium Book.
 
 5. Replace the font-family declaration with the one from Typekit
 
-    ```
+    ```html
     <!-- Change this line: -->
     font-family: '{text:GoogleWebFont}', Georgia, serif;
 
