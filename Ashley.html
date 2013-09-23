@@ -355,7 +355,7 @@
 						{/block:Photo}
 
 						{block:Photoset}
-							{Photoset-500}
+							{Photoset}
 
 							{block:Caption}
 								{Caption}
@@ -478,6 +478,17 @@
 		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
 	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
 	</footer>
-	
+	<script>
+    function resizePhotosets(){
+      var parentWidth = document.body.querySelector('.html_photoset').offsetWidth; 
+      var photosets = document.body.querySelectorAll('iframe.photoset');
+      for(var i = 0; i < photosets.length; ++i){
+        var photoset = photosets[i];
+        photoset.width = parentWidth;
+      }   
+    }
+    window.onload = resizePhotosets;
+    window.onresize = resizePhotosets;
+  </script>
 </body>
 </html>
