@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--
  
-      Theme: Ashley v0.5
+      Theme: Ashley v0.6
       Author: Jxnblk  [http://jxnblk.com]
       For: Tumblr  [http://tumblr.com/]
-      Terms: Protected under Creative Commons.
+      Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by-nc/3.0/]
   
 -->
 <html lang="en">
@@ -478,17 +478,5 @@
 		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
 	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
 	</footer>
-	<script>
-    function resizePhotosets(){
-      var parentWidth = document.body.querySelector('.html_photoset').offsetWidth; 
-      var photosets = document.body.querySelectorAll('iframe.photoset');
-      for(var i = 0; i < photosets.length; ++i){
-        var photoset = photosets[i];
-        photoset.width = parentWidth;
-      }   
-    }
-    window.onload = resizePhotosets;
-    window.onresize = resizePhotosets;
-  </script>
 </body>
 </html>
