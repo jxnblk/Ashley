@@ -3,6 +3,8 @@ Ashley
 
 A Responsive and Readable Theme for Tumblr, utilizing Google Web Fonts
 
+Over 70,000 active installs
+
 ![Ashley Screenshot](Ashley.png)
 
 ## Readable
