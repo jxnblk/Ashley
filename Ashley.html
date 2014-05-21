@@ -12,7 +12,6 @@ Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by
     <meta charset="UTF-8">
     {block:Hidden}
     <!-- Custom Variables -->
-    <!--<meta name="if:Show Avatar" content="0"/>-->
     <meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
     <meta name="if:Enable Web Fonts" content="1">
     <meta name="select:Font" content="Merriweather" title="Merriweather">
@@ -21,6 +20,11 @@ Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by
     <meta name="select:Font" content="PT Serif" title="PT Serif">
     <meta name="select:Font" content="Open Sans" title="Open Sans">
     <meta name="select:Font" content="Source Sans Pro" title="Source Sans Pro">
+
+    <meta name="select:Header Color" content="#fff" title="White">
+    <meta name="select:Header Color" content="{TitleColor}" title="Text Color">
+    <meta name="select:Header Color" content="#222" title="Dark Gray">
+
     {/block:Hidden}
     <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
     {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
@@ -118,7 +122,9 @@ Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by
         padding: 3em 0;
         {block:ShowHeaderImage}
         padding: 6em 0;
-        color: #fff;
+        margin-bottom: 4em;
+        color: {select:Header Color};
+        background-color: #ddd;
         background-image: url({HeaderImage});
         background-size: cover;
         background-position: center;
@@ -136,10 +142,12 @@ Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by
 
       header a, a.post-title {
         color: {TitleColor};
-        {block:ShowHeaderImage}
-        color: #fff;
-        {/block:ShowHeaderImage}
       }
+      {block:ShowHeaderImage}
+      header a {
+        color: {select:Header Color};
+      }
+      {/block:ShowHeaderImage}
 
       a.post-title:hover {
         text-decoration: none;
@@ -314,16 +322,20 @@ Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by
   </head>
   <body>
 
+    <!--
+    <div style="height:320px;background-position:center;background-size:cover;background-image: url({HeaderImage})"></div>
+    -->
+
     <header>
       <div class="wrap">
         {block:ShowAvatar}
-          <a href="/"><img src="{PortraitURL-128}" class="logo" /></a>
+        <a href="/"><img src="{PortraitURL-128}" class="logo" /></a>
         {/block:ShowAvatar}
         {block:ShowTitle}
-          <h1><a href="/">{Title}</a></h1>
+        <h1><a href="/">{Title}</a></h1>
         {/block:ShowTitle}
         {block:ShowDescription}
-          <p>{Description}</p>
+        <p>{Description}</p>
         {/block:ShowDescription}
       </div>
     </header>
@@ -331,11 +343,11 @@ Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by
     <div class="content wrap">
       <section class="posts">
         {block:NoSearchResults}
-          <h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+        <h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
         {/block:NoSearchResults}
 
         {block:TagPage}
-          <h2 class="h1">#{Tag}</h2>
+        <h2 class="h1">#{Tag}</h2>
         {/block:TagPage}
 
         {block:Posts}
