@@ -1,98 +1,98 @@
 <!DOCTYPE html>
 <!--
- 
-      Theme: Ashley v0.6
-      Author: Jxnblk  [http://jxnblk.com]
-      For: Tumblr  [http://tumblr.com/]
-      Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by-nc/3.0/]
-  
+
+Theme: Ashley v1.0
+Author: Jxnblk  [http://jxnblk.com]
+For: Tumblr  [http://tumblr.com/]
+Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by-nc/3.0/]
+
 -->
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-		<!-- Custom Variables -->
-		<meta name="image:Logo" content=""/>
-		<meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
-		<meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
-		<meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
-		<meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Link" content="#09b"/>
-		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
-		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
-		<link rel="shortcut icon" href="{Favicon}">
-		<link rel="apple-touch-icon" href="{PortraitURL-128}">
-		<link rel="alternate" type="application/rss+xml" href="{RSS}">
-    {block:IfGoogleWebFont}
-      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
-    {/block:IfGoogleWebFont}
+    {block:Hidden}
+    <!-- Custom Variables -->
+    <!--<meta name="if:Show Avatar" content="0"/>-->
+    <meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
+    <meta name="if:Enable Web Fonts" content="1">
+    <meta name="select:Font" content="Merriweather" title="Merriweather">
+    <meta name="select:Font" content="Gentium Book Basic" title="Gentium Book Basic">
+    <meta name="select:Font" content="Cardo" title="Cardo">
+    <meta name="select:Font" content="PT Serif" title="PT Serif">
+    <meta name="select:Font" content="Open Sans" title="Open Sans">
+    <meta name="select:Font" content="Source Sans Pro" title="Source Sans Pro">
+    {/block:Hidden}
+    <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+    {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:IfEnableWebFonts}
+    <link href='http://fonts.googleapis.com/css?family={select:Font}' rel='stylesheet' type='text/css'>
+    {/block:IfEnableWebFonts}
     <meta name=viewport content='width=device-width, initial-scale=1'>
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<style>
-      
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+
       article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl{margin:0;padding:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
-      
+
       body {
-        color: {color:Text};
-        background: {color:Background};
-        font-family: '{text:GoogleWebFont}', Georgia, serif;
+        color: {TitleColor};
+        background: {BackgroundColor};
+        font-family: Georgia, serif;
+        {block:IfEnableWebFonts}
+        font-family: '{select:Font}', Georgia, serif;
+        {/block:IfEnableWebFonts}
+
         font-size: 100%;
         line-height: 1.5;
         font-weight: 400;
       }
-      
-      
+
+
       h1, h2, .h1, .h2 {
-        font-weight: 400;
         line-height: 1.25;
         margin-top: .5em;
       }
-      
+
       h1, .h1 {
         font-size: 32px;
       }
-      
+
       h2, .h2 {
         font-size: 24px;
       }
-      
+
       h3, .h3 {
         font-size: 20px;
       }
-      
+
       h1+h2 { margin-top: 0; }
-      
+
       p, .p, ul, ol {
         font-size: 18px;
       }
-      
+
       small, .small {
         font-size: 14px;
       }
-      
+
       strong, .strong {
         font-weight: 700;
       }
-      
+
       p, ul, ol { margin-top: 1em; }
-      
-            @media screen and (min-width: 480px) {
-              h1, .h1 { font-size: 48px; }
-              h2, .h2 { font-size: 32px; }
-              h3, .h3 { font-size: 24px; }
-              p, .p, ul, ol { font-size: 20px;}
-              small, .small { font-size: 16px;}
-            }
-            
-            @media screen and (min-width: 640px) {
-              h1, .h1 { font-size: 64px; }
-              h2, .h2 { font-size: 48px; } 
-              h3, .h3 { font-size: 32px; }
-            }
-      
-      
+
+      @media screen and (min-width: 480px) {
+        h1, .h1 { font-size: 48px; }
+        h2, .h2 { font-size: 32px; }
+        h3, .h3 { font-size: 24px; }
+        p, .p, ul, ol { font-size: 20px;}
+        small, .small { font-size: 16px;}
+      }
+
       .wrap {
         width: 90%;
         padding: 0 5%;
@@ -100,190 +100,191 @@
         margin: 0 auto;
         overflow: hidden;
       }
-      
+
       article {
-        margin-top: 4em;
+        margin-bottom: 4em;
       }
-      
+
       a {
-        color: {color:Link};
+        color: {AccentColor};
         text-decoration: none;
       }
-      
+
       a:hover {
         text-decoration: underline;
       }
-      
+
       header {
-        width: 90%;
-        padding: 2em 5% 0;
-        max-width: 48em;
-        margin: 0 auto;
-        overflow: hidden;
+        padding: 3em 0;
+        {block:ShowHeaderImage}
+        padding: 6em 0;
+        color: #fff;
+        background-image: url({HeaderImage});
+        background-size: cover;
+        background-position: center;
+        {/block:ShowHeaderImage}
       }
-      
+
       .logo {
         float: left;
         margin-right: 1em;
       }
-      
+
       header h1, header p {
         margin: 0;
       }
-      
+
       header a, a.post-title {
-        color: {color:Text};
+        color: {TitleColor};
+        {block:ShowHeaderImage}
+        color: #fff;
+        {/block:ShowHeaderImage}
       }
-      
+
       a.post-title:hover {
         text-decoration: none;
-        color: {color:Link};
+        color: {AccentColor};
       }
-      
+
       header a:hover {
         text-decoration: none;
       }
-      
+
       .post img,
       .photoset,
       .photoset img,
       .photoset_row {
         max-width: 100%;
       }
-      
+
       .post iframe, .video object {
         width: 100%;
         max-width: 100%;
       }
-      
+
       .post blockquote {
         padding-left: 1em;
-        border-left: 1px solid #ddd;
+        border-left: 1px solid rgba(0,0,0,.25);
       }
-      
+
       .post ul, .post ol {
         margin-left: 2em;
       }
-      
+
       .post footer ul, .post footer ol {
         margin: 0;
       }
-      
+
       .quote blockquote {
         padding: 0;
         border: none;
         font-style: italic;
       }
-      
+
       .quote .source {
         text-align: right;
       }
-      
+
       .post footer {
         padding: 0;
         margin-top: 1em;
-        color: #aaa;
+        color: rgba(0,0,0,.5);
         font-style: italic;
       }
-      
+
       .post footer a {
-        color: #aaa;
+        color: rgba(0,0,0,.5);
       }
-      
-      .post footer a:hover {
-        color: #999;
-      }
-      
+
       .post footer .source {
         float: right;
         margin-right: 0;
       }
-      
+
       .post footer ul li {
         display: inline-block;
         margin-right: 1em;
       }
-      
+
       .tags {
         margin-top: 1em;
       }
-      
+
       .pagination {
         margin-top: 4em;
         text-align: center;
         line-height: 3em;
         overflow: hidden;
       }
-      
+
       .pagination a {
         display: block;
         height: 3em;
         padding: 0 1em;
         border-radius: 0.25em;
       }
-      
+
       .pagination a:hover {
-        background: #eee;
         text-decoration: none;
       }
-      
+
       .pagination .previous {
         float: left;
       }
-      
+
       .pagination .next {
         float: right;
       }
 
-    
+
       footer.wrap {
         padding-top: 2em;
         padding-bottom: 2em;
       }
-      
+
       ul.pages {
         list-style: none;
       }
-      
+
       ul.pages li {
         display: inline-block;
         margin-right: 1em;        
       }
-      
+
       ul.pages li a {
         display: block;
         height: 3em;
         line-height: 3em;
       }
-      
-      
+
+
       /* Permalink Notes */
-      
+
       aside.notes {
         margin-top: 4em;
       }
-      
+
       ol.notes {
         list-style: none;
         margin-top: 1em;
-        border: 1px solid #ddd;
+        border: 1px solid rgba(0,0,0,.25);
         border-radius: 0.25em;
       }
-      
+
       ol.notes, ol.notes a {
-        color: #aaa;
+        color: rgba(0,0,0,.5);
       }
-      
+
       li.note {
         display: block;
         line-height: 2em;
         padding: 0.5em 1em;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid rgba(0,0,0,.25);
       }
       li.note:last-child {
         border: none;
       }
-      
+
       ol.notes li.note img.avatar {
         display: block;
         float: left;
@@ -292,191 +293,197 @@
         margin-right: 1em;
         border-radius: 0.25em;
       }
-      
+
       .notes .action a {
-        color: {color:Text};
+        color: {TitleColor};
       }
-      
+
       .action {
         display: block;
         margin-left: 3em;
       }
-      
+
       .notes blockquote {
         line-height: 1.5;
         margin-left: 3em;
       }
-		  
-			{CustomCSS}
-			
-		</style>
-</head>
-<body>
 
-  <header>
-    {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
-  	<h1><a href="/">{Title}</a></h1>
-  	{block:Description}
-  		<p>{Description}</p>
-  	{/block:Description}
-  </header>
+      {CustomCSS}
 
-		<div class="content wrap">
-			<section class="posts">
-				{block:NoSearchResults}
-					<h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
-				{/block:NoSearchResults}
+    </style>
+  </head>
+  <body>
 
-				{block:TagPage}
-					<h2 class="h1">#{Tag}</h2>
-				{/block:TagPage}
+    <header>
+      <div class="wrap">
+        {block:ShowAvatar}
+          <a href="/"><img src="{PortraitURL-128}" class="logo" /></a>
+        {/block:ShowAvatar}
+        {block:ShowTitle}
+          <h1><a href="/">{Title}</a></h1>
+        {/block:ShowTitle}
+        {block:ShowDescription}
+          <p>{Description}</p>
+        {/block:ShowDescription}
+      </div>
+    </header>
 
-				{block:Posts}
-					<article class="post {PostType}">
-						{block:Text}
-							{block:Title}
-								<a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
-							{/block:Title}
-							
-							{Body}
-							
-							{block:More}<a href="{Permalink}" class="p">Read More &raquo;</a>{/block:More}
-							
-						{/block:Text}
+    <div class="content wrap">
+      <section class="posts">
+        {block:NoSearchResults}
+          <h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+        {/block:NoSearchResults}
 
-						{block:Photo}
-							{LinkOpenTag}
-                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
-							{LinkCloseTag}
+        {block:TagPage}
+          <h2 class="h1">#{Tag}</h2>
+        {/block:TagPage}
 
-							{block:Caption}
-								{Caption}
-							{/block:Caption}
-						{/block:Photo}
+        {block:Posts}
+        <article class="post {PostType}">
+          {block:Text}
+          {block:Title}
+          <a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
+          {/block:Title}
 
-						{block:Photoset}
-							{Photoset}
+          {Body}
 
-							{block:Caption}
-								{Caption}
-							{/block:Caption}
-						{/block:Photoset}
+          {block:More}<a href="{Permalink}" class="p">Read More &raquo;</a>{/block:More}
 
-						{block:Quote}
-							<blockquote>
-								<p class="h3">&ldquo;{Quote}&rdquo;</p>
+          {/block:Text}
 
-								{block:Source}
-									<p class="source">&ndash; {Source}</p>
-								{/block:Source}
-							</blockquote>
-						{/block:Quote}
+          {block:Photo}
+          {LinkOpenTag}
+          <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
+          {LinkCloseTag}
 
-						{block:Link}
-							<h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
+          {block:Caption}
+          {Caption}
+          {/block:Caption}
+          {/block:Photo}
 
-							{block:Description}
-								{Description}
-							{/block:Description}
-						{/block:Link}
+          {block:Photoset}
+          {Photoset}
 
-						{block:Chat}
-							{block:Title}
-								<h2>{Title}</h2>
-							{/block:Title}
+          {block:Caption}
+          {Caption}
+          {/block:Caption}
+          {/block:Photoset}
 
-							<ul>
-								{block:Lines}
-									<li class="{Alt}">
-										{block:Label}
-										    <b>{Label}</b>
-										{/block:Label}
+          {block:Quote}
+          <blockquote>
+            <p class="h3">&ldquo;{Quote}&rdquo;</p>
 
-										{Line}
-									</li>
-								{/block:Lines}
-							</ul>
-						{/block:Chat}
+            {block:Source}
+            <p class="source">&ndash; {Source}</p>
+            {/block:Source}
+          </blockquote>
+          {/block:Quote}
 
-						{block:Audio}
-							
-						  {AudioEmbed-640}
-							
-							{block:Caption}
-								{Caption}
-							{/block:Caption}
-						{/block:Audio}
+          {block:Link}
+          <h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
 
-						{block:Video}
-							{Video-700}
+          {block:Description}
+          {Description}
+          {/block:Description}
+          {/block:Link}
 
-							{block:Caption}
-								{Caption}
-							{/block:Caption}
-						{/block:Video}
+          {block:Chat}
+          {block:Title}
+          <h2>{Title}</h2>
+          {/block:Title}
 
-						{block:Answer}
-							<h2>{Asker} asked: <q>{Question}</q></h2>
+          <ul>
+            {block:Lines}
+            <li class="{Alt}">
+              {block:Label}
+              <b>{Label}</b>
+              {/block:Label}
 
-							{Answer}
-						{/block:Answer}
+              {Line}
+            </li>
+            {/block:Lines}
+          </ul>
+          {/block:Chat}
 
-						{block:Date}
-							<footer>
-								<ul class="small">
-									<li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
-									{block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
-									{block:ContentSource}
-										<li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
-									{/block:ContentSource}
-								</ul>
-								
-								{block:PermalinkPage}
-                    {block:HasTags}
-  											<ul class="tags">
-  												{block:Tags}
-  													<li>
-  														<a href="{TagURL}">#{Tag}</a>
-  													</li>
-  												{/block:Tags}
-  											</ul>
-  									{/block:HasTags}			
-								{/block:PermalinkPage}
-															
-							</footer>
-						{/block:Date}
-					</article> <!-- /post -->			
-				
-  				{block:PostNotes}
-  				  <aside class="notes">
-    				  {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
-    					{PostNotes-64}
-  				  </aside>
-  				{/block:PostNotes}
+          {block:Audio}
 
-				{/block:Posts}
-				
-				{block:Pagination}
-					<div class="pagination p">
-						<span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
-						<span class="page-numbers">{CurrentPage}/{TotalPages}</span>
-						<span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
-					</div>
-				{/block:Pagination}
-							
-			</section> <!-- /posts -->
-		</div> <!-- /content -->
-	
-	<footer class="small wrap">
-  	{block:HasPages}
-  		<ul class="pages">
-				{block:Pages}
-					<li><a href="{URL}">{Label}</a></li>
-				{/block:Pages}
-  		</ul>
-		{/block:HasPages}
-		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
-	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
-	</footer>
-</body>
+          {AudioEmbed-640}
+
+          {block:Caption}
+          {Caption}
+          {/block:Caption}
+          {/block:Audio}
+
+          {block:Video}
+          {Video-700}
+
+          {block:Caption}
+          {Caption}
+          {/block:Caption}
+          {/block:Video}
+
+          {block:Answer}
+          <h2>{Asker} asked: <q>{Question}</q></h2>
+
+          {Answer}
+          {/block:Answer}
+
+          {block:Date}
+          <footer>
+            <ul class="small">
+              <li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
+              {block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
+              {block:ContentSource}
+              <li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
+              {/block:ContentSource}
+            </ul>
+
+            {block:PermalinkPage}
+            {block:HasTags}
+            <ul class="tags">
+              {block:Tags}
+              <li>
+                <a href="{TagURL}">#{Tag}</a>
+              </li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}      
+            {/block:PermalinkPage}
+
+          </footer>
+          {/block:Date}
+        </article> <!-- /post -->     
+
+        {block:PostNotes}
+        <aside class="notes">
+          {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
+          {PostNotes-64}
+        </aside>
+        {/block:PostNotes}
+
+        {/block:Posts}
+
+        {block:Pagination}
+        <div class="pagination p">
+          <span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
+          <span class="page-numbers">{CurrentPage}/{TotalPages}</span>
+          <span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
+        </div>
+        {/block:Pagination}
+
+      </section> <!-- /posts -->
+    </div> <!-- /content -->
+
+    <footer class="small wrap">
+      {block:HasPages}
+      <ul class="pages">
+        {block:Pages}
+        <li><a href="{URL}">{Label}</a></li>
+        {/block:Pages}
+      </ul>
+      {/block:HasPages}
+      {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
+      {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
+    </footer>
+  </body>
 </html>
