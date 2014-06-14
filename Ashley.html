@@ -454,7 +454,20 @@
     					{PostNotes-64}
   				  </aside>
   				{/block:PostNotes}
+				
+				{block:IndexPage}<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+				<script type="text/javascript">
+				    var disqus_shortname = '{text:Disqus Shortname}';
 
+				    (function () {
+				        var s = document.createElement('script'); s.async = true;
+				        s.type = 'text/javascript';
+				        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+				        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				    }());
+				</script>
+				{/block:IndexPage}
+				
 				{/block:Posts}
 				<!-- Start Disqus -->
 				{block:IfDisqusShortname}
