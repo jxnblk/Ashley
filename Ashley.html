@@ -14,7 +14,7 @@
 		<meta name="image:Logo" content=""/>
 		<meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
 		<meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
-		<meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
+		<meta name="text:GoogleWebFontURL" content="Gentium BookB asic"/>
 		<meta name="color:Background" content="#fff"/>
     <meta name="color:Text" content="#444"/>
     <meta name="color:Link" content="#09b"/>
@@ -24,8 +24,12 @@
 		<link rel="apple-touch-icon" href="{PortraitURL-128}">
 		<link rel="alternate" type="application/rss+xml" href="{RSS}">
     {block:IfGoogleWebFont}
-      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFont}' rel='stylesheet' type='text/css'>
     {/block:IfGoogleWebFont}
+    {block:IfGoogleWebFontURL}
+      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+    {/block:IfGoogleWebFontURL}
+
     <meta name=viewport content='width=device-width, initial-scale=1'>
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -132,7 +136,12 @@
       }
       
       header a, a.post-title {
+        font-family: '{text:GoogleWebFontURL}', Georgia, serif;
         color: {color:Text};
+     }
+      
+      .link h1 {
+      	font-family: '{text:GoogleWebFontURL}', Georgia, serif;
       }
       
       a.post-title:hover {
